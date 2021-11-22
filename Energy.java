@@ -36,21 +36,21 @@ final class Energy {
     * @param args No args will be used
     */
     public static void main(final String[] args) {
+        // set answer
+        final double myAnswer;
+        final double mass;
+        // input
+        System.out.print("Enter the mass of an objact in kilograms: ");
+        final Scanner myObj = new Scanner(System.in);
         try {
-            // set answer
-            final double myAnswer;
-            // input
-            System.out.print("Enter the mass of an objact in kilograms: ");
-            final Scanner myObj = new Scanner(System.in);
             // set mass
-            final float mass = myObj.nextFloat();
+            mass = myObj.nextFloat();
             // calculate
             myAnswer = mass * Math.pow(CTWO, 2);
             // output
             System.out.println(mass + "kg of mass would produce " + myAnswer
                 + "J of energy.");
-        }
-        catch (Exception e) {
+        } catch (Exception NumberFormatException) {
             System.out.println("Something went wrong.");
         }
 
