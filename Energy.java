@@ -50,7 +50,7 @@ final class Energy {
             // output
             System.out.println(mass + "kg of mass would produce " + myAnswer
                 + "J of energy.");
-        } catch (Exception NumberFormatException) {
+        } catch (java.util.InputMismatchException errorCode) {
             System.out.println("Something went wrong.");
         }
 
